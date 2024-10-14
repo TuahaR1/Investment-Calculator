@@ -1,43 +1,35 @@
 ﻿@model FutureValueModel
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-</
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Single Pager</title>
-</head>
-<body>
     
     <h1>Future Value Calculator</h1>
     <form asp-action="Index" method="post">
     <div>
-        <label asp-for="MonthlyInvestment">Monthly Investment</label>
-        <input asp-for="MonthlyInvestment" />
+        <label asp-for="MonthlyInvestment" class="form-label">Monthly Investment</label>
+        <input asp-for="MonthlyInvestment" class="form-control" />
     </div>
 
     <div>
-        <label asp-for="YearlyInvestment">Yearly Interest Rate</label>
-        <input asp-for="YearlyInvestment" />
+        <label asp-for="YearlyInvestment" class="form-label">Yearly Interest Rate</label>
+        <input asp-for="YearlyInvestment" class="form-control"/>
     </div>
 
     <div>
-        <label asp-for="Year">Years</label>
-        <input asp-for="Year" />
+        <label asp-for="Year" class="form-label">Years</label>
+        <input asp-for="Year" class="form-control"/>
     </div>
 
     <div>
-        <label>Calculate</label>
-        <input value="@ViewBag.FV.ToString("C")" readonly/>
+        <label class="form-label">Calculate</label>
+        <input class="form-control" value="@ViewBag.FV.ToString("C")" readonly/>
     </div>
 
     <div>  
-        <button type="submit">Calculate</button>
-        <a asp-action="Index">Clear</a>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+        <a asp-action="Index" class="btn btn-secondary">Clear</a>
     </div>
     </form>
-</body>
-</html>
+

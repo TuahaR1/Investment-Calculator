@@ -7,8 +7,4 @@
     <RootNamespace>Investment_Calculator</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Shared\" />
-  </ItemGroup>
-
 </Project>
