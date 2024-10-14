@@ -1,0 +1,43 @@
+﻿@model FutureValueModel
+
+@{
+    Layout = null;
+}
+
+</
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Pager</title>
+</head>
+<body>
+    
+    <h1>Future Value Calculator</h1>
+    <form asp-action="Index" method="post">
+    <div>
+        <label asp-for="MonthlyInvestment">Monthly Investment</label>
+        <input asp-for="MonthlyInvestment" />
+    </div>
+
+    <div>
+        <label asp-for="YearlyInvestment">Yearly Interest Rate</label>
+        <input asp-for="YearlyInvestment" />
+    </div>
+
+    <div>
+        <label asp-for="Year">Years</label>
+        <input asp-for="Year" />
+    </div>
+
+    <div>
+        <label>Calculate</label>
+        <input value="@ViewBag.FV.ToString("C")" readonly/>
+    </div>
+
+    <div>  
+        <button type="submit">Calculate</button>
+        <a asp-action="Index">Clear</a>
+    </div>
+    </form>
+</body>
+</html>
