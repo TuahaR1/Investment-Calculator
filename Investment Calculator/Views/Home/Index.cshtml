@@ -5,7 +5,7 @@
 }
 
     
-    <h1>Future Value Calculator</h1>
+    <h1>Investment Calculator</h1>
     <form asp-action="Index" method="post">
     <div>
         <label asp-for="MonthlyInvestment" class="form-label">Monthly Investment</label>
@@ -26,7 +26,7 @@
         <label class="form-label">Calculate</label>
         <input class="form-control" value="@ViewBag.FV.ToString("C")" readonly/>
     </div>
-
+    <br />
     <div>  
         <button type="submit" class="btn btn-primary">Calculate</button>
         <a asp-action="Index" class="btn btn-secondary">Clear</a>
